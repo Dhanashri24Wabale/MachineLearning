@@ -1,0 +1,73 @@
+df=pd.read_csv("Classified Data",index_col=0)
+
+index_col=0
+Q1) in this case what is the use of index_col=0?
+It means 1 will be the index of first column,2 will be the index of the 2nd col,and so on..
+
+df.head()==>
+it will display first five rows.
+
+Q2) What is the use of sklearn.processing?
+
+The sklearn.preprocessing package provides several common utility functions and transformer classes to change raw feature vectors into a representation that is more suitable for the downstream estimators. In general, learning algorithms benefit from standardization of the data set.
+
+Q3)what is the use of from sklearn.preprocessing import StandardScaler?
+Standardize features by removing the mean and scaling to unit variance. StandardScaler is a mean-based scaling method. The formula of StandardScaler is (Xi-Xmean)/Xstd, so it adjusts the mean as a 0.
+
+or
+StandardScaler() which returns a Scaler object with methods for transforming data sets.
+
+Q4) what is the use of scale.fit() method in scaler.fit(df.drop('TARGET CLASS',axis=1))?
+
+So by fit the imputer calculates the means of columns from some data, and by transform it applies those means to some data (which is just replacing missing values with the means). If both these data are the same (i.e. the data for calculating the means and the data that means are applied to) you can use fit_transform which is basically a fit followed by a transform.
+
+Q5) what is the use of axis=0 in python?
+ 
+i.e.,to performs column-wise operations. and So a mean on axis 0 will be the mean of all the rows in each column, and a mean on axis 1 will be a mean of all the columns in each row.
+
+
+Q6)What is the meaning of Axis = 1 in pandas?
+The parameter axis=1 refer to columns, while 0 refers to rows. In this case you are sorting by columns, specifically index 1, which is col2 (indexing in python starts at 0).
+
+Q7) what is the use of KNeighborsClassifier?
+In statistics, the k-nearest neighbors algorithm ( k-NN) is a non-parametric classification method first developed by Evelyn Fix and Joseph Hodges in 1951, and later expanded by Thomas Cover. It is used for classification and regression. In both cases, the input consists of the k closest training examples in data set.
+
+Q8) KNeighborsClassifier(n_neighbors=1) meaning?
+In KNN, K is the number of nearest neighbors. The number of neighbors is the core deciding factor. K is generally an odd number if the number of classes is 2. When K=1, then the algorithm is known as the nearest neighbor algorithm. This is the simplest case. Suppose P1 is the point, for which label needs to predict.
+
+Q9)what is the use of confusion_matrix?
+A confusion matrix is a tabular summary of the number of correct and incorrect predictions made by a classifier. It is used to measure the performance of a classification model. It can be used to evaluate the performance of a classification model through the calculation of performance metrics like accuracy, precision, recall, and F1-score.
+
+Q10)what is the use of classification_report?
+
+Image: scikit-yb.org
+A Classification report is used to measure the quality of predictions from a classification algorithm. How many predictions are True and how many are False. More specifically, True Positives, False Positives, True negatives and False Negatives are used to predict the metrics of a classification report as shown below.
+
+	
+Q11) what is the use of train_test_split in python?
+train_test_split is a function in Sklearn model selection for splitting data arrays into two subsets: for training data and for testing data. With this function, you don't need to divide the dataset manually.
+
+By default, Sklearn train_test_split will make random partitions for the two subsets. However, you can also specify a random state for the operation.
+
+Q12) what is the use of from sklearn.neighbors import KNeighborsClassifier?
+
+The k-neighbors is commonly used and easy to apply classification method which implements the k neighbors queries to classify data. It is an instant-based and non-parametric learning method. In this method, the classifier learns from the instances in the training dataset and classifies new input by using the previously measured scores.
+
+Q13)what is the use of sklearn in machine learning?
+The sklearn library contains a lot of efficient tools for machine learning and statistical modeling including classification, regression, clustering and dimensionality reduction. Please note that sklearn is used to build machine learning models. It should not be used for reading the data, manipulating and summarizing it.
+
+Q14) what is the use of n_neighbors=3?
+
+n_neighborsint, default=5
+Number of neighbors to use by default for kneighbors queries.
+
+Q15) what is the use of fit(x,y)?
+	
+Fit the k-nearest neighbors classifier from the training dataset.or Fit/Train data using knn classifier on training set
+Q16) what is the use of knn.predict(x_test)?
+Compare prediction w/ known labels
+
+Q17)what is the use of scaler.fit_transform(x)?
+fit_transform () fit_transform () is used on the training data so that we can scale the training data and also learn the scaling parameters of that data. Here, the model built by us will learn the mean and variance of the features of the training set. These learned parameters are then used to scale our test data.
+
+
